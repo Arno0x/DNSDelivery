@@ -7,9 +7,9 @@ DNSDelivery provides delivery and in memory execution of shellcode or .Net assem
 
 DNSDelivery has to sides:
   1. The server side, coming as a single python script (`dnsdelivery.py`), which acts as a custom DNS server, serving the payload data
-  2. The client side (*victim's side*), which comes in two flavor:
-  - `dnsdelivery.cs`: a C# script that can be compiled with `csc.exe` to provide a Windows managed executable
-  - `Invoke-DNSDelivery`: a PowerShell script providing the exact same functionnalities
+  2. The client side (*victim's side*), which comes in two flavors:
+    - `dnsdelivery.cs`: a C# script that can be compiled with `csc.exe` to provide a Windows managed executable
+    - `Invoke-DNSDelivery`: a PowerShell script providing the exact same functionnalities
 
 In order for the whole thing to work **you need to own your domain name** and set the DNS record for that domain to point to the server that will run the `dnsdelivery.py` server side.
 For local testing purposes though, you can configure the client side scripts to point to any DNS server.
@@ -100,7 +100,7 @@ Second, encode this executable to a base64 string:
 root@kali:~# cat meterpreter.exe > base64 -w 0 > meterpreter.b64
 ```
 
-Third paste the base64 string (*yes, it can be huge, around 3MB*) into the `peLoader.cs` (thx @SubTee) available here [@peloader.cs](https://github.com/Arno0x/CSharpScripts/blob/master/peloader.cs) and compile this into a Windows executable (*which by the way IS a .Net assembly*).
+Third paste the base64 string (*yes, it can be huge, around 3MB*) into the `peLoader.cs` (thx @SubTee) available here [peloader.cs](https://github.com/Arno0x/CSharpScripts/blob/master/peloader.cs) and compile this into a Windows executable (*which by the way IS a .Net assembly*).
 
 Eventually, serve it with DNSDelivery:
 ```
