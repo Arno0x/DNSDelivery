@@ -6,7 +6,7 @@ How to compile:
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /unsafe /out:dnsdelivery.exe *.cs
 
 Or, with debug information:
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /unsafe /define:DEBUG /out:dnsdelivery.exe dnsdelivery.cs
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /unsafe /define:DEBUG /out:dnsdelivery.exe *.cs
 
 */
 
