@@ -9,7 +9,7 @@ DNSDelivery has to sides:
   1. The server side, coming as a single python script (`dnsdelivery.py`), which acts as a custom DNS server, serving the payload data
   2. The client side (*victim's side*), which comes in two flavors:
     - `dnsdelivery.cs`: a C# script that can be compiled with `csc.exe` to provide a Windows managed executable
-    - `Invoke-DNSDelivery`: a PowerShell script providing the exact same functionnalities
+    - `Invoke-DNSDelivery.ps1`: a PowerShell script providing the exact same functionnalities
 
 In order for the whole thing to work **you need to own your domain name** and set the DNS record for that domain to point to the server that will run the `dnsdelivery.py` server side.
 For local testing purposes though, you can configure the client side scripts to point to any DNS server.
